@@ -11,11 +11,12 @@
   <body>
     <div class="flex-container">
       <div class="title"><h1>Etch A Sketch</h1></div>
+      <div class="mode">Mode: Coloring</div>
       <div class="content">
         <div class="board"></div>
         <div class="buttons">
-          <button>Choose Color</button>
           <button onclick="changeColor('Black')">Black</button>
+          <button onclick="changeColor('Grey')">Grey</button>
           <button onclick="changeColor('White')">White</button>
           <button onclick="changeColor('Random')">Random</button>
           <button onclick="resetBoard()">Reset</button>
@@ -28,6 +29,9 @@
             onchange="changeSize(this.value)"
           />
           <button>Set Size</button>
+        </div>
+        <div class="error" style="display: none">
+          Input must be between 2 and 100
         </div>
       </div>
     </div>
